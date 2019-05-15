@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.shovelware.www.pixchange.PictureGallery">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/gallery_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Pictures" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed Hunts" />
+
+
+    </android.support.design.widget.TabLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+        <GridView
+            android:id="@+id/galleryView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="0dp"
+            android:numColumns="2"
+
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0dp"
+
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/fab_takePictureIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:scaleType="center"
+            app:elevation="8dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/new_picture2" />
+    </RelativeLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:layout_weight="1"
+        android:id="@+id/picture_gallery_nav_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation2" />
+
+
+</LinearLayout >

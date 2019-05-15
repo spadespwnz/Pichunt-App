@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shovelware.www.pixchange.ParentActivity">
+    <RelativeLayout
+        android:id="@+id/stats_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/account_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Name: "/>
+        <TextView
+            android:layout_toRightOf="@id/account_name_label"
+            android:layout_alignTop="@id/account_name_label"
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_-_loading_-_"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/account_name_label"
+            android:id="@+id/gallery_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pictures Taken: "/>
+        <TextView
+            android:layout_toRightOf="@id/gallery_count_label"
+            android:layout_alignBottom="@id/gallery_count_label"
+            android:id="@+id/gallery_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_-_loading_-_"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/gallery_count_label"
+            android:id="@+id/hunts_found_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hunts Found: "/>
+        <TextView
+            android:layout_toRightOf="@id/hunts_found_label"
+            android:layout_alignBottom="@id/hunts_found_label"
+            android:id="@+id/hunts_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_-_loading_-_"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/hunts_found_label"
+            android:id="@+id/collect_others_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collected By Others: "/>
+        <TextView
+            android:layout_toRightOf="@id/collect_others_label"
+            android:layout_alignBottom="@id/collect_others_label"
+            android:id="@+id/collect_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_-_loading_-_"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/collect_others_label"
+            android:id="@+id/stars_received_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collected By Others: "/>
+        <TextView
+            android:layout_toRightOf="@id/stars_received_label"
+            android:layout_alignBottom="@id/stars_received_label"
+            android:id="@+id/stars_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="_-_loading_-_"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_layout"
+        android:text="Randomly load from a list off possible things like Most Like Pic / Most Found Pic, etcetcetc"/>
+
+    <Button
+        android:layout_above="@id/navigation"
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+    <FrameLayout
+        android:id="@+id/parentContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>
